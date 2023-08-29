@@ -1,5 +1,5 @@
 {
-  "name": "Poketwo-Autocatcher",
+  "name": "poketwo-autocatcher",
   "version": "1.3.0",
   "description": "bot to help users with catching pokemons",
   "main": "index.js",
@@ -14,5 +14,13 @@
     "express": "^4.18.2",
     "ocr-space-api-wrapper": "^2.3.0",
     "pokehint": "^1.1.7"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nguyenle0608/Poketwo-Autocatcher.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nguyenle0608/Poketwo-Autocatcher/issues"
+  },
+  "homepage": "https://github.com/nguyenle0608/Poketwo-Autocatcher#readme"
 }
