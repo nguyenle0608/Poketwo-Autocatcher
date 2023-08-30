@@ -21,8 +21,8 @@ const {
 
 const config = require('./config.json')
 const json = require('./namefix.json');
-// const allowedChannels = [1146037852644311121]; // Add your allowed channel IDs to this array or leave it like [] if you want to it to catch from all channels
-const allowedChannels = []; // Add your allowed channel IDs to this array or leave it like [] if you want to it to catch from all channels
+const allowedChannels = ["1146037852644311121", "1146281873300017233"]; // Add your allowed channel IDs to this array or leave it like [] if you want to it to catch from all channels
+// const allowedChannels = []; // Add your allowed channel IDs to this array or leave it like [] if you want to it to catch from all channels
 let isSleeping = false;
 
 
@@ -205,7 +205,7 @@ client.on('messageCreate', async message => {
     } else {
 
       const Pokebots = ["696161886734909481", "874910942490677270"]; //sierra ,pokename
-      if (allowedChannels.length > 0 && !allowedChannels.includes(message.channel.id)) {
+      if (allowedChannels.length > 0 && !allowedChannels.includes(message.channel.id.toString())) {
         return;
       }
       if (Pokebots.includes(message.author.id)) {
@@ -234,7 +234,7 @@ client.on('messageCreate', async message => {
               const name5 = name1.replace(/Q/g, 'R');
               const name = findOutput(name5);
 
-              const delay = Math.floor(Math.random() * 6 + 5) * 1000; //interval from 5-10seconds
+              const delay = Math.floor(Math.random() * 6) * 1000; //interval from 5-10seconds
               console.log("A Pokemon Spawned, Catching in " + (delay / 1000) + "seconds")
               setTimeout(async () => {
                 message.channel.send(`<@716390085896962058> c ${name}`)
